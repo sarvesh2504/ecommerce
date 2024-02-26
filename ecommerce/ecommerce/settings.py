@@ -117,6 +117,15 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 
+# Define the additional directories where Django should look for static files
+STATICFILES_DIRS = [
+    BASE_DIR / 'static',  # Assuming your static files are in a directory named 'static' in your project root
+    BASE_DIR / 'static' / 'css',
+    BASE_DIR / 'static' / 'img',
+    BASE_DIR / 'static' / 'fonts',
+    BASE_DIR / 'static' / 'js',
+]
+
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
 
@@ -131,4 +140,5 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'store',  # Add your app name here
 ]
+
 
